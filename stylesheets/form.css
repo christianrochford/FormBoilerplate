@@ -3704,61 +3704,55 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   margin: 25px 0px;
   display: block;
   width: 437px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
   background: #FFE6E6;
   display: none;
 }
 
-/* line 101, ../sass/_main.scss */
+/* line 98, ../sass/_main.scss */
 #errors li {
   padding: 2px;
   list-style: none;
 }
 
-/* line 106, ../sass/_main.scss */
+/* line 103, ../sass/_main.scss */
 #errors li:before {
   content: ' - ';
 }
 
-/* line 110, ../sass/_main.scss */
+/* line 107, ../sass/_main.scss */
 #errors #info {
   font-weight: bold;
 }
 
-/* line 114, ../sass/_main.scss */
+/* line 111, ../sass/_main.scss */
 #errors #info:before {
   content: '';
 }
 
-/* line 118, ../sass/_main.scss */
+/* line 115, ../sass/_main.scss */
 #success {
   border: solid 1px #83D186;
   padding: 25px 10px;
   margin: 25px 0px;
   display: block;
   width: 437px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
   background: #D3EDD3;
   font-weight: bold;
   display: none;
 }
 
-/* line 132, ../sass/_main.scss */
+/* line 126, ../sass/_main.scss */
 #errors.visible, #success.visible {
   display: block;
 }
 
-/* line 136, ../sass/_main.scss */
+/* line 130, ../sass/_main.scss */
 #req-field-desc {
   font-style: italic;
 }
 
 /* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
-/* line 141, ../sass/_main.scss */
+/* line 135, ../sass/_main.scss */
 input:required, textarea:required {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -3768,21 +3762,21 @@ input:required, textarea:required {
 
 /* Normalize placeholder styles */
 /* chrome, safari */
-/* line 151, ../sass/_main.scss */
+/* line 145, ../sass/_main.scss */
 ::-webkit-input-placeholder {
   color: #CCC;
   font-style: italic;
 }
 
 /* mozilla */
-/* line 157, ../sass/_main.scss */
+/* line 151, ../sass/_main.scss */
 input:-moz-placeholder, textarea:-moz-placeholder {
   color: #CCC;
   font-style: italic;
 }
 
 /* ie (faux placeholder) */
-/* line 163, ../sass/_main.scss */
+/* line 157, ../sass/_main.scss */
 input.placeholder-text, textarea.placeholder-text {
   color: #CCC;
   font-style: italic;
