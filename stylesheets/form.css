@@ -3598,120 +3598,27 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   font-size: 1em;
 }
 
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
-/* line 9, ../sass/_main.scss */
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
-
-/* line 13, ../sass/_main.scss */
-body {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/* line 18, ../sass/_main.scss */
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/* line 23, ../sass/_main.scss */
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/* line 28, ../sass/_main.scss */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/* line 37, ../sass/_main.scss */
-img {
-  vertical-align: middle;
-}
-
-/* line 41, ../sass/_main.scss */
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 47, ../sass/_main.scss */
-textarea {
-  resize: vertical;
-}
-
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-/* line 56, ../sass/_main.scss */
-body {
-  font: 16px/26px Helvetica, Helvetica Neue, Arial;
-}
-
-/* line 60, ../sass/_main.scss */
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
-
-/* ===================
-    ALL: Orange Theme
-   =================== */
-/* line 69, ../sass/_main.scss */
-.header-container {
-  border-bottom: 20px solid #e44d26;
-}
-
-/* line 73, ../sass/_main.scss */
-.header-container {
-  background: #f16529;
-}
-
-/* line 77, ../sass/_main.scss */
-.title {
-  color: white;
-}
-
-/* ==============
-    Form Styles
-   ============== */
-/* line 85, ../sass/_main.scss */
+/* line 2, ../sass/_main.scss */
 #contact-form {
   background-color: #F2F7F9;
-  width: 490px;
   padding: 20px;
   margin: 50px auto;
   position: relative;
 }
 
-/* line 93, ../sass/_main.scss */
+/* line 9, ../sass/_main.scss */
 #contact-form h1 {
   font-size: 42px;
 }
 
-/* line 97, ../sass/_main.scss */
+/* line 13, ../sass/_main.scss */
 #contact-form h2 {
   margin-bottom: 15px;
   font-style: italic;
   font-weight: normal;
 }
 
-/* line 106, ../sass/_main.scss */
+/* line 22, ../sass/_main.scss */
 #contact-form input,
 #contact-form select,
 #contact-form textarea,
@@ -3720,17 +3627,16 @@ body {
   margin-bottom: 2px;
 }
 
-/* line 113, ../sass/_main.scss */
+/* line 29, ../sass/_main.scss */
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
-  width: 450px;
   border: 1px solid #CEE1E8;
   margin-bottom: 20px;
   padding: 4px;
 }
 
-/* line 122, ../sass/_main.scss */
+/* line 37, ../sass/_main.scss */
 #contact-form input:focus,
 #contact-form select:focus,
 #contact-form textarea:focus {
@@ -3738,24 +3644,24 @@ body {
   background-color: #EBF2F4;
 }
 
-/* line 127, ../sass/_main.scss */
+/* line 42, ../sass/_main.scss */
 #contact-form textarea {
   height: 150px;
   resize: none;
 }
 
-/* line 132, ../sass/_main.scss */
+/* line 47, ../sass/_main.scss */
 #contact-form label {
   display: block;
 }
 
-/* line 136, ../sass/_main.scss */
+/* line 51, ../sass/_main.scss */
 #contact-form .required {
   font-weight: bold;
   color: #F00;
 }
 
-/* line 141, ../sass/_main.scss */
+/* line 56, ../sass/_main.scss */
 #contact-form #submit-button {
   width: 100px;
   background-color: #333;
@@ -3769,18 +3675,18 @@ body {
   -moz-border-radius: 8px;
 }
 
-/* line 154, ../sass/_main.scss */
+/* line 69, ../sass/_main.scss */
 #contact-form #submit-button:hover {
   background-color: #A6CFDD;
 }
 
-/* line 158, ../sass/_main.scss */
+/* line 73, ../sass/_main.scss */
 #contact-form #submit-button:active {
   position: relative;
   top: 1px;
 }
 
-/* line 163, ../sass/_main.scss */
+/* line 78, ../sass/_main.scss */
 #contact-form #loading {
   width: 32px;
   height: 32px;
@@ -3791,7 +3697,7 @@ body {
   display: none;
 }
 
-/* line 173, ../sass/_main.scss */
+/* line 88, ../sass/_main.scss */
 #errors {
   border: solid 1px #E58E8E;
   padding: 10px;
@@ -3805,28 +3711,28 @@ body {
   display: none;
 }
 
-/* line 186, ../sass/_main.scss */
+/* line 101, ../sass/_main.scss */
 #errors li {
   padding: 2px;
   list-style: none;
 }
 
-/* line 191, ../sass/_main.scss */
+/* line 106, ../sass/_main.scss */
 #errors li:before {
   content: ' - ';
 }
 
-/* line 195, ../sass/_main.scss */
+/* line 110, ../sass/_main.scss */
 #errors #info {
   font-weight: bold;
 }
 
-/* line 199, ../sass/_main.scss */
+/* line 114, ../sass/_main.scss */
 #errors #info:before {
   content: '';
 }
 
-/* line 203, ../sass/_main.scss */
+/* line 118, ../sass/_main.scss */
 #success {
   border: solid 1px #83D186;
   padding: 25px 10px;
@@ -3841,18 +3747,18 @@ body {
   display: none;
 }
 
-/* line 217, ../sass/_main.scss */
+/* line 132, ../sass/_main.scss */
 #errors.visible, #success.visible {
   display: block;
 }
 
-/* line 221, ../sass/_main.scss */
+/* line 136, ../sass/_main.scss */
 #req-field-desc {
   font-style: italic;
 }
 
 /* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
-/* line 226, ../sass/_main.scss */
+/* line 141, ../sass/_main.scss */
 input:required, textarea:required {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -3862,141 +3768,22 @@ input:required, textarea:required {
 
 /* Normalize placeholder styles */
 /* chrome, safari */
-/* line 236, ../sass/_main.scss */
+/* line 151, ../sass/_main.scss */
 ::-webkit-input-placeholder {
   color: #CCC;
   font-style: italic;
 }
 
 /* mozilla */
-/* line 242, ../sass/_main.scss */
+/* line 157, ../sass/_main.scss */
 input:-moz-placeholder, textarea:-moz-placeholder {
   color: #CCC;
   font-style: italic;
 }
 
 /* ie (faux placeholder) */
-/* line 248, ../sass/_main.scss */
+/* line 163, ../sass/_main.scss */
 input.placeholder-text, textarea.placeholder-text {
   color: #CCC;
   font-style: italic;
-}
-
-/* ==============
-    MOBILE: Main
-   ============== */
-/* line 258, ../sass/_main.scss */
-.main {
-  padding: 30px 0;
-}
-
-/* ===============
-    ALL: IE Fixes
-   =============== */
-/* line 266, ../sass/_main.scss */
-.ie7 .title {
-  padding-top: 20px;
-}
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-@media only screen and (min-width: 768px) {
-  /* ====================
-      WIDE: CSS3 Effects
-     ==================== */
-  /* line 281, ../sass/_main.scss */
-  .header-container {
-    -webkit-box-shadow: 0 5px 10px #aaa;
-    -moz-box-shadow: 0 5px 10px #aaa;
-    box-shadow: 0 5px 10px #aaa;
-  }
-
-  /* ============
-      WIDE: Menu
-     ============ */
-  /* line 291, ../sass/_main.scss */
-  .title {
-    float: left;
-  }
-}
-@media only screen and (min-width: 1140px) {
-  /* ===============
-      Maximal Width
-     =============== */
-  /* line 303, ../sass/_main.scss */
-  .wrapper {
-    width: 1026px;
-    /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/* line 313, ../sass/_main.scss */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  *text-indent: -9999px;
-}
-
-/* line 320, ../sass/_main.scss */
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
-/* line 327, ../sass/_main.scss */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-/* line 332, ../sass/_main.scss */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/* line 344, ../sass/_main.scss */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-/* line 353, ../sass/_main.scss */
-.invisible {
-  visibility: hidden;
-}
-
-/* line 358, ../sass/_main.scss */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-/* line 363, ../sass/_main.scss */
-.clearfix:after {
-  clear: both;
-}
-
-/* line 367, ../sass/_main.scss */
-.clearfix {
-  *zoom: 1;
 }

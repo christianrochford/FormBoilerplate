@@ -39,3 +39,10 @@ Load paths:
 2013-11-20 14:27:09 overwrite stylesheets/form.css 
 2013-11-20 14:28:05 overwrite stylesheets/form.css 
 2013-11-20 14:28:11 identical stylesheets/form.css 
+2013-11-20 15:24:26     error sass/form.scss (Line 61 of sass/_base.scss: Invalid CSS after "...ial, sans-serif": expected "{", was "; font-weight: ...")
+2013-11-20 15:24:26 overwrite stylesheets/form.css 
+2013-11-20 15:24:45     error sass/form.scss (Line 61 of sass/_base.scss: Invalid CSS after "...ial, sans-serif": expected "{", was "; font-weight: ...")
+2013-11-20 15:24:45 overwrite stylesheets/form.css 
+2013-11-20 15:25:21 overwrite stylesheets/form.css 
+2013-11-20 15:25:23 identical stylesheets/form.css 
+2013-11-20 15:26:17 overwrite stylesheets/form.css 
