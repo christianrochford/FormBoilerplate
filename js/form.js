@@ -1,7 +1,7 @@
 $(function(){
 
     //set global variables and cache DOM elements for reuse later
-    var form = $('#contact-form').find('form'),
+    var form = $('#contact-form'),
         formElements = form.find('input[type!="submit"],textarea'),
         formSubmitButton = form.find('[type="submit"]'),
         errorNotice = $('#errors'),

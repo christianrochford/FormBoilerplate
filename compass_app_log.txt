@@ -47,3 +47,23 @@ Load paths:
 2013-11-20 15:25:23 identical stylesheets/form.css 
 2013-11-20 15:26:17 overwrite stylesheets/form.css 
 2013-11-20 16:54:59 overwrite stylesheets/form.css 
+2013-11-21 11:48:54 identical stylesheets/form.css 
+2013-11-21 11:49:07 overwrite stylesheets/form.css 
+2013-11-21 11:58:23     error sass/form.scss (Line 222 of sass/_main.scss: Invalid CSS after "}": expected "}", was "")
+2013-11-21 11:58:23 overwrite stylesheets/form.css 
+2013-11-21 11:59:44     error sass/form.scss (Line 5 of sass/_main.scss: Undefined variable: "$form".)
+2013-11-21 11:59:44 overwrite stylesheets/form.css 
+2013-11-21 12:00:15     error sass/form.scss (Line 11 of sass/_main.scss: Undefined variable: "$wednesday".)
+2013-11-21 12:00:15 overwrite stylesheets/form.css 
+2013-11-21 12:00:37     error sass/form.scss (Line 15 of sass/_main.scss: Undefined variable: "$menu-text".)
+2013-11-21 12:00:37 overwrite stylesheets/form.css 
+2013-11-21 12:01:11     error sass/form.scss (Line 49 of sass/_main.scss: Undefined variable: "$textdark".)
+2013-11-21 12:01:11 overwrite stylesheets/form.css 
+2013-11-21 12:01:28     error sass/form.scss (Line 49 of sass/_main.scss: Undefined variable: "$textdark".)
+2013-11-21 12:01:28 identical stylesheets/form.css 
+2013-11-21 12:01:44 overwrite stylesheets/form.css 
+2013-11-21 12:03:51 overwrite stylesheets/form.css 
+2013-11-21 12:06:20 overwrite stylesheets/form.css 
+2013-11-21 12:06:54 overwrite stylesheets/form.css 
+2013-11-21 12:07:24     error sass/form.scss (Line 17 of sass/_buttons.scss: Invalid CSS after "}": expected selector or at-rule, was "}")
+2013-11-21 12:07:24 overwrite stylesheets/form.css 

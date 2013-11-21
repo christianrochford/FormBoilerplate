@@ -5,32 +5,13 @@
 .dotted {
 	border: 2px dotted #000;
 	color: #000;
-	background: transparent;
 	font-size: 16px;
 	padding: 12px 20px 12px;
 
 &:hover, &:focus, &:active {
-		background: rgba(255,255,255, 0.5);
+		background: green;
 		color: #000;
 		border: 2px dotted #000;
-
 	}
-
-
-span {
- &:before {
-content: "•";
-padding: 0 5px;
-font-size: 1em;
- }
-
-&:after {
-content: "•";
-padding: 0 5px;
-font-size: 1em;
- }
-
- 	
-
 }
 }

@@ -1,88 +1,182 @@
 
-#contact-form {
-    background-color:#F2F7F9;
-    padding:20px;
-    margin: 50px auto;    
-    position:relative;
-}
+form.custom{
+    margin: 40px 0;
+    input, input[type="text"], input[type="email"], textarea, select, a{
+      background-color: green;
+      font-size: 1.4em;
+      padding: 25px;
+      outline: none;
+    }
+    input[type=text]:focus, input[type="email"]:focus, textarea:focus, a:focus {
+      box-shadow: 0 0 5px yellow;
+    }
+    div.custom.dropdown{
+      background-color: green;
+      color: #fff;
+      border: none;
+      a.current{
+        background-color: green;
+        font-size: 1.4em;
+        @include breakpoint(mobile-landscape){
+          font-size: 1em;
+        }
+        @include breakpoint(mobile){
+          font-size: 0.8em;
+        }
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        padding: 12px 28px;
+      }
+      a.selector{
+        border: none;
+        @include breakpoint(tablet){
+          padding: 24px;
+        }
+        &:after{
+          border: solid 8px;
+          border-color: #fff transparent transparent transparent;
+          margin-top: -6px;
+          margin-left: -20px;
+        }
+        &:focus{
+          box-shadow: none;
+          border: none;
+        }
+      }
+      &:hover a.selector:after, &:focus a.selector:after, &:active a.selector:after{
+        border: solid 8px;
+        border-color: gray transparent transparent transparent;
+        margin-top: -6px;
+        margin-left: -20px;
+      }
+      ul{
+        top: 50px;
+        border-color: #fff;
+        li{
+          background-color: green;
+          font-size: 1.4em;
+          color: #fff;
+          text-transform: uppercase;
+          padding: 12px 28px;
+          &:hover{
+            background-color: #fff;
+            color: green;
+            &:after{
+              content: ""; 
+            }
+          }
+        }
+        li.selected{
+          background-color: #fff;
+          color: green;
+          &:after { 
+            content: ""; 
+          }
+          &:hover, &:focus{
+            background-color: #fff;
+            color: green;
+          }
+        }
+      }
+    }
+    div.custom.dropdown.open a.selector:after{
+        border: solid 8px;
+        border-color: #fff transparent transparent transparent;
+        margin-top: -6px;
+        margin-left: -20px;
+    }
+    ::-webkit-input-placeholder {
+      color: #fff;
+      text-transform: uppercase;
+       @include breakpoint(mobile-landscape){
+        font-size: 0.8em;
+      }
+      @include breakpoint(mobile){
+        font-size: 0.6em;
+      }
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: #fff;
+      text-transform: uppercase;
+      @include breakpoint(mobile-landscape){
+        font-size: 0.8em;
+      }
+      @include breakpoint(mobile){
+        font-size: 0.6em;
+      }
+    }
 
-#contact-form h1 {
-    font-size:42px;
-}
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: #fff;
+      text-transform: uppercase;
+      @include breakpoint(mobile-landscape){
+        font-size: 0.8em;
+      }
+      @include breakpoint(mobile){
+        font-size: 0.6em;
+      }
+    }
 
-#contact-form h2 {
-    margin-bottom:15px;
-    font-style:italic;
-    font-weight:normal;
-}
-
-#contact-form input, 
-#contact-form select, 
-#contact-form textarea, 
-#contact-form label {
-    font-size:15px;
-    margin-bottom:2px;
-}
-
-#contact-form input, 
-#contact-form select, 
-#contact-form textarea {
-    border: 1px solid #CEE1E8;
-    margin-bottom:20px;
-    padding:4px;
-}
-
-#contact-form input:focus, 
-#contact-form select:focus, 
-#contact-form textarea:focus {
-    border: 1px solid #AFCDD8;
-    background-color: #EBF2F4;
-}
-
-#contact-form textarea {
-    height:150px;
-    resize: none;
-}
-
-#contact-form label {
-    display:block;
-}
-
-#contact-form .required {
-    font-weight:bold;
-    color:#F00;    
-}
-
-#contact-form #submit-button {
-    width: 100px;
-    background-color:#333;
-    color:#FFF;
-    border:none;
-    display:block;
-    float:right;
-    margin-bottom:0px;
-    margin-right:6px;
-    background-color:#8FB5C1;
-    -moz-border-radius:8px;
-}
-
-#contact-form #submit-button:hover {
-    background-color: #A6CFDD;
-}
-
-#contact-form #submit-button:active {
-    position:relative;
-    top:1px;
+    :-ms-input-placeholder {  
+      color: #fff;
+      text-transform: uppercase;
+      @include breakpoint(mobile-landscape){
+        font-size: 0.8em;
+      }
+      @include breakpoint(mobile){
+        font-size: 0.6em;
+      }
+    }
+    textarea{
+      @include breakpoint(tablet){
+        margin-top: 30px;
+      }
+    }
+    input[type="submit"]{
+      background-color: transparent;
+      text-transform: uppercase;
+      width: 100%;
+      padding: 15px;
+      &:hover, &:focus{
+        background: green;
+        cursor: pointer;
+      }
+    }
+    .submit{
+      position: relative;
+      float: right;
+      @include breakpoint(tablet){
+        float: none;
+      }
+      span{
+        position: absolute;
+        top: 22px;
+        left: 207px;
+        z-index: -1;
+        @include breakpoint(desktop){
+          display: none;
+        }
+        @include breakpoint(mobile){
+          display: block;
+          left: 59px;
+        }
+      &:before {
+        content: "•";
+        padding: 0 42px;
+        font-size: 1em;
+        }
+      &:after {
+        content: "•";
+        padding: 0 42px;
+        font-size: 1em;
+      }
+    }
+  }
 }
 
 #contact-form #loading {
-    width:32px;
-    height:32px;
-    display:block;
-    position:absolute;
-    right:130px;
-    bottom:16px;
-    display:none;
+
 }
 
 #errors {
@@ -127,34 +221,3 @@
     display:block;    
 }
 
-#req-field-desc {
-    font-style:italic;
-}
-
-/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
-input:required, textarea:required {
-    -moz-box-shadow:none;
-    -webkit-box-shadow:none;
-    -o-box-shadow:none;
-    box-shadow:none;
-}
-
-/* Normalize placeholder styles */
-
-/* chrome, safari */
-::-webkit-input-placeholder {
-    color:#CCC;
-    font-style:italic;
-}
-
-/* mozilla */
-input:-moz-placeholder, textarea:-moz-placeholder {
-    color:#CCC;
-    font-style:italic;
-}
-
-/* ie (faux placeholder) */
-input.placeholder-text, textarea.placeholder-text  { 
-    color:#CCC;
-    font-style:italic;
-}
