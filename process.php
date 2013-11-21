@@ -17,7 +17,7 @@ if( isset($_POST) ){
     $telephone = $_POST['telephone'];
     $enquiry = $_POST['enquiry'];
     $radio = $_POST['radio'];
-    $checkbox = $_POST['checkbox'];
+    $checkbox = $_POST['formcheckbox'];
     $message = $_POST['message'];
     
     //validate name is not empty
