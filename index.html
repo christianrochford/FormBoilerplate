@@ -57,27 +57,20 @@
                       </div>
                     </div>
                     
-<!-- Custom Radio
-  <div class="row">
-    <div class="four columns">
-      <label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Radio Button 1</label>
-      <label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> Radio Button 2</label>
-      <label for="radio3"><input name="radio1" type="radio" id="radio3" disabled style="display:none;"><span class="custom radio"></span> Radio Button 3</label>
+
+
+    <div class="six columns">
+      <label for="radio1"><input name="radio2" type="radio" id="radio1" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio1'] : '' ?>"> RADIO BUTTON 1</label>
+      <label for="radio2"><input name="radio2" CHECKED type="radio" id="radio2" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio2'] : '' ?>"> RADIO BUTTON 2</label>
+      <label for="radio3"><input name="radio3" type="radio" id="radio3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio3'] : '' ?>"> RADIO BUTTON 3</label>
     </div>
-    <div class="four columns">
-      <label for="radio4"><input name="radio2" type="radio" id="radio4" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio1'] : '' ?>"> Radio Button 1</label>
-      <label for="radio5"><input name="radio2" CHECKED type="radio" id="radio5" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio2'] : '' ?>"> Radio Button 2</label>
-      <label for="radio6"><input name="radio2" type="radio" id="radio6" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio3'] : '' ?>"> Radio Button 3</label>
+    <div class="six columns">
+      <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox1'] : '' ?>"><span class="custom checkbox"></span> CHECKBOX 1</label>
+      <label for="checkbox2"><input type="checkbox" id="checkbox2" checked style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox2'] : '' ?>"><span class="custom checkbox checked"></span> CHECKBOX 2</label>
+      <label for="checkbox3"><input type="checkbox" CHECKED id="checkbox3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox3'] : '' ?>"> CHECKBOX 3</label>
     </div>
 
-    <!-- Custom Checkbox
-    <div class="four columns">
-      <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox1'] : '' ?>"><span class="custom checkbox"></span> Label for Checkbox</label>
-      <label for="checkbox2"><input type="checkbox" id="checkbox2" checked style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox2'] : '' ?>"><span class="custom checkbox checked"></span> Label for Checkbox</label>
-      <label for="checkbox3"><input type="checkbox" CHECKED id="checkbox3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox3'] : '' ?>"> Label for Checkbox</label>
-    </div>
-  </div>
- -->
+
                     <div class="twelve columns">
                     <textarea id="message" name="message" cols="30" rows="10" placeholder="COMMENTS" required="required" data-minlength="20"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
                     </div>
@@ -96,7 +89,7 @@
                         endif;
                         ?>
                     </ul>
-                    <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p> 
+                    <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for contacting Us! We'll get back to you shortly.</p> 
                     </div>
                     <div class="six columns submit">
                         <input name="submit" type="submit" value="submit" class="dotted button">
