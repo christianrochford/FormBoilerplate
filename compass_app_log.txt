@@ -67,3 +67,9 @@ Load paths:
 2013-11-21 12:06:54 overwrite stylesheets/form.css 
 2013-11-21 12:07:24     error sass/form.scss (Line 17 of sass/_buttons.scss: Invalid CSS after "}": expected selector or at-rule, was "}")
 2013-11-21 12:07:24 overwrite stylesheets/form.css 
+2013-11-21 13:04:27     error sass/form.scss (Line 17 of sass/_buttons.scss: Invalid CSS after "}": expected selector or at-rule, was "}")
+2013-11-21 13:04:27 identical stylesheets/form.css 
+2013-11-21 13:05:15 overwrite stylesheets/form.css 
+2013-11-21 13:05:55 overwrite stylesheets/form.css 
+2013-11-21 13:09:53 overwrite stylesheets/form.css 
+2013-11-21 15:06:36 overwrite stylesheets/form.css 

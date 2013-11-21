@@ -1,7 +1,7 @@
 $(function(){
 
     //set global variables and cache DOM elements for reuse later
-    var form = $('#contact-form'),
+    var form = $('#contact-form').find('form'),
         formElements = form.find('input[type!="submit"],textarea'),
         formSubmitButton = form.find('[type="submit"]'),
         errorNotice = $('#errors'),
@@ -38,7 +38,7 @@ $(function(){
         
         //to ensure compatibility with HTML5 forms, we have to validate the form on submit button click event rather than form submit event. 
         //An invalid html5 form element will not trigger a form submit.
-        formSubmitButton.bind('click',function(){
+        formSubmitButton.unbind('click').bind('click',function(){
             var formok = true, errors = [];
             formElements.each(function(){
             var name = this.name,

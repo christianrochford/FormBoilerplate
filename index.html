@@ -15,7 +15,8 @@
     <body>
     
     <div class="row">
-        <div class="twelve columns">
+        <div class="twelve columns" id="form">
+            <div id="contact-form" class="clearfix"> 
                 <?php
                 //init variables
                 $cf = array();
@@ -26,23 +27,8 @@
                     $sr = true;
                 }
                 ?>
-
-                <ul id="errors" class="
-                    <?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?> ">
-                    <li id="info">There were some problems with your form submission:</li>
-                    <?php 
-                    if(isset($cf['errors']) && count($cf['errors']) > 0) :
-                        foreach($cf['errors'] as $error) :
-                    ?>
-                    <li><?php echo $error ?></li>
-                    <?php
-                        endforeach;
-                    endif;
-                    ?>
-                </ul>
-                <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p> 
-
-                <form class="custom" id="contact_form" method="post" action="process.php">
+                
+                <form class="custom" method="post" action="process.php">
                     <div class="six columns">  
                         <input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="NAME" required="required" autofocus="autofocus" />
                     </div>
@@ -50,34 +36,78 @@
                         <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="EMAIL" required="required" />
                     </div>
                         <div class="six columns"> 
-                        <input type="tel" id="telephone" name="telephone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['telephone'] : '' ?>" placeholder="PHONE(OPTIONAL)" />
+                        <input type="text" id="telephone" name="telephone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['telephone'] : '' ?>" placeholder="PHONE(OPTIONAL)" />
                     </div>
                     <div class="six columns"> 
-                        <select id="enquiry" name="enquiry">
-                            <option value="General" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'General') ? "selected='selected'" : '' ?>>General</option>
-                            <option value="Sales" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Sales') ? "selected='selected'" : '' ?>>Sales</option>
-                            <option value="Support" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Support') ? "selected='selected'" : '' ?>>Support</option>
-                        </select>
-                        <select name="to" id="to" class="custom dropdown">
-                            <a href="#" class="selector"></a>
-                            <option value="laura@follain.ie">General Enquiries</option>
-                            <option value="laura@follain.ie">Catering</option>
-                            <option value="laura@follain.ie">Wholesale</option>
-                        </select>
+                      <select style="display:none;" id="customDropdown" name="enquiry" id="enquiry">
+                        <a href="#" class="selector"></a>
+                        <option value="General" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'General') ? "selected='selected'" : '' ?>>General</option>
+                        <option value="Sales" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Sales') ? "selected='selected'" : '' ?>>Sales</option>
+                        <option value="Support" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'Support') ? "selected='selected'" : '' ?>>Look, a third option</option>
+                      </select>
+                      <div class="custom dropdown">
+                        <a href="#" class="current">
+                          General
+                        </a>
+                        <a href="#" class="selector"></a>
+                        <ul>
+                          <li>Support</li>
+                          <li>Sales</li>
+                        </ul>
+                      </div>
                     </div>
+                    
+<!-- Custom Radio
+  <div class="row">
+    <div class="four columns">
+      <label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Radio Button 1</label>
+      <label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> Radio Button 2</label>
+      <label for="radio3"><input name="radio1" type="radio" id="radio3" disabled style="display:none;"><span class="custom radio"></span> Radio Button 3</label>
+    </div>
+    <div class="four columns">
+      <label for="radio4"><input name="radio2" type="radio" id="radio4" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio1'] : '' ?>"> Radio Button 1</label>
+      <label for="radio5"><input name="radio2" CHECKED type="radio" id="radio5" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio2'] : '' ?>"> Radio Button 2</label>
+      <label for="radio6"><input name="radio2" type="radio" id="radio6" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio3'] : '' ?>"> Radio Button 3</label>
+    </div>
+
+    <!-- Custom Checkbox
+    <div class="four columns">
+      <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox1'] : '' ?>"><span class="custom checkbox"></span> Label for Checkbox</label>
+      <label for="checkbox2"><input type="checkbox" id="checkbox2" checked style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox2'] : '' ?>"><span class="custom checkbox checked"></span> Label for Checkbox</label>
+      <label for="checkbox3"><input type="checkbox" CHECKED id="checkbox3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox3'] : '' ?>"> Label for Checkbox</label>
+    </div>
+  </div>
+ -->
                     <div class="twelve columns">
                     <textarea id="message" name="message" cols="30" rows="10" placeholder="COMMENTS" required="required" data-minlength="20"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
                     </div>
                     <span id="loading"></span>
+                    <div class="six columns">
+                    <ul id="errors" class="
+                        <?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?> ">
+                        <li id="info">There were some problems with your form submission:</li>
+                        <?php 
+                        if(isset($cf['errors']) && count($cf['errors']) > 0) :
+                            foreach($cf['errors'] as $error) :
+                        ?>
+                        <li><?php echo $error ?></li>
+                        <?php
+                            endforeach;
+                        endif;
+                        ?>
+                    </ul>
+                    <p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for your message! We will get back to you ASAP!</p> 
+                    </div>
                     <div class="six columns submit">
                         <input name="submit" type="submit" value="submit" class="dotted button">
-                        <span></span>
                     </div>
-                </form>  
+                </form>
+                </div>  
         </div> <!-- #main-container -->
     </div>
-
         <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script src="js/vendor/jquery.foundation.buttons.js"></script>
+        <script src="js/vendor/jquery.foundation.forms.js"></script>
         <script src="js/form.js"></script>
     </body>
 </html>
