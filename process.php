@@ -35,11 +35,7 @@ if( isset($_POST) ){
         $formok = false;
         $errors[] = "You have not entered a valid email address";
     }
-    //validate message is not empty
-    if(empty($checkbox)){
-        $formok = false;
-        $errors[] = "You have not checked any of the boxes";
-    }
+
     //validate message is not empty
     if(empty($message)){
         $formok = false;
