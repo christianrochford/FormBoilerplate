@@ -16,6 +16,8 @@ if( isset($_POST) ){
     $email = $_POST['email'];
     $telephone = $_POST['telephone'];
     $enquiry = $_POST['enquiry'];
+    $radio = $_POST['radio'];
+    $checkbox = $_POST['checkbox'];
     $message = $_POST['message'];
     
     //validate name is not empty
@@ -33,7 +35,11 @@ if( isset($_POST) ){
         $formok = false;
         $errors[] = "You have not entered a valid email address";
     }
-
+    //validate message is not empty
+    if(empty($checkbox)){
+        $formok = false;
+        $errors[] = "You have not checked any of the boxes";
+    }
     //validate message is not empty
     if(empty($message)){
         $formok = false;
@@ -56,6 +62,8 @@ if($formok){
                   <p><strong>Email Address: </strong> {$email} </p>
                   <p><strong>Telephone: </strong> {$telephone} </p>
                   <p><strong>Enquiry: </strong> {$enquiry} </p>
+                  <p><strong>Radio Button: </strong> {$radio} </p>
+                  <p><strong>Checkbox: </strong> {$checkbox} </p>
                   <p><strong>Message: </strong> {$message} </p>
                   <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
     

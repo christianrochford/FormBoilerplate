@@ -10,6 +10,9 @@ form.custom{
     input[type=text]:focus, input[type="email"]:focus, textarea:focus, a:focus {
       box-shadow: 0 0 5px yellow;
     }
+    .dropdown{
+        height: 64px;
+    }
     div.custom.dropdown{
       background-color: green;
       color: #fff;
@@ -85,6 +88,20 @@ form.custom{
         border-color: #fff transparent transparent transparent;
         margin-top: -6px;
         margin-left: -20px;
+    }
+    label{
+      margin-left: 10px;
+      margin-bottom: 12px;
+    }
+    span.custom.radio.checked:before{
+        width: 14px;
+        height: 14px;
+        background: #61116a;
+    }
+    span.custom.checkbox.checked:before {
+        content: "";
+        color: #222222;
+        background: #61116a;
     }
     ::-webkit-input-placeholder {
       color: #fff;

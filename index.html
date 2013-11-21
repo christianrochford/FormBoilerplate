@@ -38,7 +38,7 @@
                         <div class="six columns"> 
                         <input type="text" id="telephone" name="telephone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['telephone'] : '' ?>" placeholder="PHONE(OPTIONAL)" />
                     </div>
-                    <div class="six columns"> 
+                    <div class="six columns dropdown"> 
                       <select style="display:none;" id="customDropdown" name="enquiry" id="enquiry">
                         <a href="#" class="selector"></a>
                         <option value="General" <?php echo ($sr && !$cf['form_ok'] && $cf['posted_form_data']['enquiry'] == 'General') ? "selected='selected'" : '' ?>>General</option>
@@ -60,14 +60,14 @@
 
 
     <div class="six columns">
-      <label for="radio1"><input name="radio2" type="radio" id="radio1" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio1'] : '' ?>"> RADIO BUTTON 1</label>
-      <label for="radio2"><input name="radio2" CHECKED type="radio" id="radio2" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio2'] : '' ?>"> RADIO BUTTON 2</label>
-      <label for="radio3"><input name="radio3" type="radio" id="radio3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio3'] : '' ?>"> RADIO BUTTON 3</label>
+      <label for="radio1"><input name="radio" type="radio" id="radio1" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio1'] : '' ?>"> RADIO BUTTON 1</label>
+      <label for="radio2"><input name="radio" type="radio" id="radio2" CHECKED value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio2'] : '' ?>"> RADIO BUTTON 2</label>
+      <label for="radio3"><input name="radio" type="radio" id="radio3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['radio3'] : '' ?>"> RADIO BUTTON 3</label>
     </div>
     <div class="six columns">
       <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox1'] : '' ?>"><span class="custom checkbox"></span> CHECKBOX 1</label>
-      <label for="checkbox2"><input type="checkbox" id="checkbox2" checked style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox2'] : '' ?>"><span class="custom checkbox checked"></span> CHECKBOX 2</label>
-      <label for="checkbox3"><input type="checkbox" CHECKED id="checkbox3" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox3'] : '' ?>"> CHECKBOX 3</label>
+      <label for="checkbox2"><input type="checkbox" id="checkbox2" style="display: none;" CHECKED value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox2'] : '' ?>"><span class="custom checkbox checked"></span> CHECKBOX 2</label>
+      <label for="checkbox3"><input type="checkbox" id="checkbox3" style="display: none;" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['checkbox3'] : '' ?>"> CHECKBOX 3</label>
     </div>
 
 
