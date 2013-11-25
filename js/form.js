@@ -10,6 +10,7 @@ $(function(){
         errorMessages = {
             required: ' is a required field',
             email: 'You have not entered a valid email address for the field: ',
+            checkbox: 'You have not checked any boxes',
             minlength: ' must be greater than '
         }
 
@@ -55,6 +56,10 @@ $(function(){
                 //if there is a value missing
                 if(this.validity.valueMissing){
                     errors.push(nameUC + errorMessages.required);    
+                }
+                //if no checkboxes are checked
+                else if(this.validity.valueMissing && type == 'checkbox'){
+                    errors.push(errorMessages.checkbox + nameUC);
                 }
                 //if this is an email input and it is not valid
                 else if(this.validity.typeMismatch && type == 'email'){
@@ -103,10 +108,6 @@ $(function(){
 
         //if form is not valid
         if(!formok){
-        //animate required field notice
-        $('#req-field-desc').stop().animate({marginLeft: '+=' + 5},150,function(){
-            $(this).animate({marginLeft: '-=' + 5},150);
-        });
         //show error message 
         showNotice('error',errors);     
         } else {

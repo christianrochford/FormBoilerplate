@@ -17,7 +17,7 @@ if( isset($_POST) ){
     $telephone = $_POST['telephone'];
     $enquiry = $_POST['enquiry'];
     $radio = $_POST['radio'];
-    $checkbox = $_POST['formcheckbox'];
+    $checkbox = implode(",", $_POST['formcheckbox']);
     $message = $_POST['message'];
     
     //validate name is not empty
@@ -37,10 +37,17 @@ if( isset($_POST) ){
     }
 
     //validate message is not empty
+    if(empty($checkbox)){
+        $formok = false;
+        $errors[] = "You have not checked any boxes";
+    }
+
+    //validate message is not empty
     if(empty($message)){
         $formok = false;
         $errors[] = "You have not entered a message";
     }
+
     //validate message is greater than 20 charcters
     elseif(strlen($message) < 20){
         $formok = false;
@@ -50,7 +57,7 @@ if( isset($_POST) ){
 
 //send email if all is ok
 if($formok){
-    $headers = "From: user@website.com" . "\r\n";
+    $headers = "From: {$email}" . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     
     $emailbody = "<p>You have recieved a new message from the contact form on your website.</p>
@@ -73,6 +80,8 @@ $returndata = array(
         'email' => $email,
         'telephone' => $telephone,
         'enquiry' => $enquiry,
+        'radio' => $radio,
+        'checkbox' => explode(",", $checkbox),
         'message' => $message
     ),
     'form_ok' => $formok,
